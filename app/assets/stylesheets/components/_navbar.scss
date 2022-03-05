@@ -3,10 +3,16 @@
   background: white;
 }
 
+.navbar-lewagon .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    }
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 120px;
 }
