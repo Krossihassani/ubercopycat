@@ -1,3 +1,3 @@
 class Offer < ApplicationRecord
-    validates :departing_from, :going_to, :car_model, :car_photo, presence: true
+    validates :price_per_km, :available_seats, :car_model, :car_photo, presence: true
 end
