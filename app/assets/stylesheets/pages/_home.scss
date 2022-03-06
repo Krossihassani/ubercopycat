@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+.jumbotron {
+    background-image: linear-gradient(to bottom, rgba(147,165,207,0.5), rgba(228,239,233,0.5)),
+    url(http://res.cloudinary.com/dbuxqhjsq/image/upload/v1646500338/l4xyemljbi3lbiws5ubz.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }

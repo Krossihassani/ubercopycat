@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron jumbotron-fluid container-fluid px-5 flex-grow-1 overflow-auto">
+  <h1 class="display-4">Ride an Uber today!</h1>
+  <p class="lead">Focused on safety, wherever you go</p>
+  <hr class="my-4">
+  <p>Register to enjoy a dependable and readily available transportation service.</p>
+  <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-dark btn-lg sign-up-button" %>
+</div>
+
+
+<%# <%= cl_image_tag("atutkvrzwfsr4x1pvbws.jpg", width: 400, height: 300, crop: :fill) %>
