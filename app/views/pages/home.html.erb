@@ -1,10 +1,39 @@
-<div class="jumbotron jumbotron-fluid container-fluid px-5 flex-grow-1 overflow-auto">
-  <h1 class="display-4">Ride an Uber today!</h1>
-  <p class="lead">Focused on safety, wherever you go</p>
-  <hr class="my-4">
-  <p>Register to enjoy a dependable and readily available transportation service.</p>
-  <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-dark btn-lg sign-up-button" %>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="carousel-1">
+      <h1 class="display-4">Find a ride today!</h1>
+      <hr class="my-3">
+      <p class="lead">Focused on safety, wherever you go</p>
+      <hr class="my-1">
+      <p>Register to enjoy a dependable and readily available transportation service.</p>
+      <hr class="my-2">
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-dark btn-lg sign-up-button" %>
+    </div>
+    <div class="carousel-item" id="carousel-2">
+      <h1 class="display-4">Find a ride today!</h1>
+      <hr class="my-3">
+      <p class="lead">Focused on safety, wherever you go</p>
+      <hr class="my-1">
+      <p>Register to enjoy a dependable and readily available transportation service.</p>
+      <hr class="my-2">
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-dark btn-lg sign-up-button" %>
+    </div>
+    <div class="carousel-item" id="carousel-3">
+      <h1 class="display-4">Find a ride today!</h1>
+      <hr class="my-3">
+      <p class="lead">Focused on safety, wherever you go</p>
+      <hr class="my-1">
+      <p>Register to enjoy a dependable and readily available transportation service.</p>
+      <hr class="my-2">
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-dark btn-lg sign-up-button" %>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"></span>
+  </button>
 </div>
-
-
-<%# <%= cl_image_tag("atutkvrzwfsr4x1pvbws.jpg", width: 400, height: 300, crop: :fill) %>
