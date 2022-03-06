@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  flex-grow: 0;
 }
 
 .navbar-lewagon .nav-item .nav-link {
@@ -15,4 +16,9 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 120px;
+}
+
+.navbar-lewagon .nav-item {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
 }

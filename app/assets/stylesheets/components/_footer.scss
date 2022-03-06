@@ -9,14 +9,17 @@
     height: 50px;
     padding: 0px 50px;
     color: rgba(255,255,255,0.3);
+    flex-grow: 0;
+    z-index: 1;
   }
 
   .footer .footer-copyright {
     color: white;
-    opacity: 0.15;
+    opacity: 0.25;
     text-decoration: none;
     font-size: 12px;
   }
+  
   .footer .footer-copyright:hover {
-    opacity: 0.3;
+    opacity: 0.5;
   }

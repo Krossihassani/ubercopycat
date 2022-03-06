@@ -1,0 +1,43 @@
+.carousel {
+    color: white;
+    flex-grow: 1;
+    display: flex;
+}
+
+.carousel-inner .carousel-item {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 95%;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner .carousel-item h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.carousel-inner .carousel-item p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#carousel-1 {
+    background-image: linear-gradient(to bottom, rgba(83, 83, 83, 0.5), rgba(29, 29, 29, 0.178)), url(http://res.cloudinary.com/dbuxqhjsq/image/upload/v1646601358/uyi2bnqgb4xhgvpfpb8u.jpg);
+}
+
+
+#carousel-2 {
+    background-image: linear-gradient(to bottom, rgba(83, 83, 83, 0.5), rgba(29, 29, 29, 0.178)), url(http://res.cloudinary.com/dbuxqhjsq/image/upload/v1646500338/l4xyemljbi3lbiws5ubz.jpg);
+}
+
+
+#carousel-3 {
+    background-image: linear-gradient(to bottom, rgba(83, 83, 83, 0.5), rgba(29, 29, 29, 0.178)), url(http://res.cloudinary.com/dbuxqhjsq/image/upload/v1646601368/ssafqgh3mvpw4kqxeulr.jpg);
+}
