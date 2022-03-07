@@ -17,6 +17,17 @@
     align-items: center;
 }
 
+
+.carousel-inner .carousel-item .sign-up-button {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0.2;
+    }
+  }
+
 .carousel-inner .carousel-item h1 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
