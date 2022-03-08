@@ -1,0 +1,12 @@
+<%= simple_form_for @offer do |o| %>
+<div class="form-inputs">
+  <%= o.input :car_model, label: "Enter your car model:", label_html: { class: 'my_class' } %>
+  <%= o.input :price_per_km, label: "Price per Kilometer:", label_html: { class: 'my_class' } %>
+  <%= o.input :available_seats, label: "Number of available seats:", label_html: { class: 'my_class' } %>
+  <%= o.input :car_photo, as: :file, input_html: { data: { direct_upload_url: '/rails/active_storage/direct_uploads' } } %>
+</div>
+<div class="d-flex flex-column align-items-center">
+  <div class="form-actions">
+    <%= o.button :submit, class: "btn btn-lg btn-dark my-2" %>
+  </div>
+<% end %>
