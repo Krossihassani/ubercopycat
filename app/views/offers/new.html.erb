@@ -1,5 +1,5 @@
 <%= simple_form_for @offer do |o| %>
-<div class="form-inputs">
+<div class="form-inputs container bg-light bg-gradient justify-content-center mt-5">
   <%= o.input :car_model, label: "Enter your car model:", label_html: { class: 'my_class' } %>
   <%= o.input :price_per_km, label: "Price per Kilometer:", label_html: { class: 'my_class' } %>
   <%= o.input :available_seats, label: "Number of available seats:", label_html: { class: 'my_class' } %>
