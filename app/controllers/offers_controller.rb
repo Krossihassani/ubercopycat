@@ -2,14 +2,17 @@ class OffersController < ApplicationController
 
   def index
     @offers = Offer.all
+    @offers = policy_scope(Offer).order(created_at: :desc)
   end
 
   def show
     @offer = Offer.find(params[:id])
+    authorize @offer
   end
 
   def new
     @offer = Offer.new
+    authorize @offer
   end
 
   def create
@@ -25,18 +28,20 @@ class OffersController < ApplicationController
 
   def edit
     @offer = Offer.find(params[:id])
+    authorize @offer
+    render :new
   end
 
   def update
-    @offer.user = current_user
     @offer = Offer.find(params[:id])
+    authorize @offer
     @offer.update(offer_params)
     redirect_to offer_path(@offer)
   end
 
   def destroy
-    @offer.user = current_user
     @offer = Offer.find(params[:id])
+    authorize @offer
     @offer.destroy
     redirect_to offers_path
   end

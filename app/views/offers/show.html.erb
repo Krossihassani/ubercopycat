@@ -1,3 +1,17 @@
-<h2><%= @offer.car_model %></h2>
-<p><%= @offer.price_per_km %></p>
-<p><%= @offer.available_seats %></p>
+<div class="card-car">
+  <%= cl_image_tag @offer.car_photo.key %>
+  <div class="card-car-infos">
+    <div>
+      <h2><%= @offer.car_model %></h2>
+      <p>Driven by: <%= @offer.user.full_name %></p>
+    </div>
+    <h2 class="card-car-pricing"><%= @offer.price_per_km.floor %> USD</h2>
+    <%= cl_image_tag @offer.user.avatar.key, class: "card-car-user avatar-bordered" %>
+  </div>
+  <div class="d-flex justify-content-between">
+    <% if policy(@offer).edit? %>
+        <%= link_to 'Edit', edit_offer_path(@offer) %>
+    <% end %>
+    <%= link_to "Return to Driver's list", offers_path(@offers) %>
+    </div>
+</div>
