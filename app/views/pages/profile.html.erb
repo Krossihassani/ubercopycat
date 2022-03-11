@@ -1,0 +1,25 @@
+<div class="flex-grow-1 ml-5 mt-4 mr-4">
+<div class="d-inline-flex justify-content-around">
+  <%= image_tag current_user.avatar, style: "width: 250px; height: 220px", class: "flex-fill" %>
+  <div class="d-flex flex-column ml-2 flex-fill">
+    <h4>Full name :</h4>
+    <p><%= current_user.full_name %></p>
+    <h4>Email :</h4>
+    <p><%= current_user.email %></p>
+    <h4>Postal code :</h4>
+    <p><%= current_user.postal_code %></p>
+  </div>
+</div>
+<div class = "mt-5">
+  <h4>My cars :</h4>
+  <div class = "d-flex mt-4">
+    <% current_user.offers.each do |o| %>
+      <div class="d-flex flex-column ml-2 flex-fill ">
+        <p style="text-align:center"><%= o.car_model %></p>
+        <%= image_tag o.car_photo, style: "width: 100%; height: 180px; object-fit: cover;" %>
+        <%= link_to 'Edit', edit_offer_path(o), class: "d-flex justify-content-center" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

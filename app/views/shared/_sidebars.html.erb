@@ -1,0 +1,24 @@
+<div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white" style="width: 250px; background-image: linear-gradient(to left, #000000 , #2d3436);"> 
+    <a href="/dashboard" class="d-flex align-items-center justify-content-center mb-2 mb-md-0 me-md-auto text-white text-decoration-none"> 
+        <span>Welcome</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li> <%= link_to "Dashboard", "/dashboard", class: "dropdown-item active text-white sidebar-link" %> </li>
+        <li> <%= link_to "Add a new car", "/offers/new", class: "dropdown-item text-white sidebar-link" %> </li>
+        <li> <%= link_to "Drivers", "/offers", class: "dropdown-item text-white sidebar-link" %> </li>
+        <li> <%= link_to "Search for a ride", "#", class: "dropdown-item text-white sidebar-link" %> </li>  
+    </ul>
+    <hr>
+    <div class="dropdown d-flex align-items-center"> <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"> <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <strong class="pl-2"> <%= current_user.full_name %></strong> </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li> <%= link_to "Profile", "/profile", class: "dropdown-item" %> </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+        </ul>
+         <div class="online-badge ml-2"></div> 
+    </div>
+</div>
