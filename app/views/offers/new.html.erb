@@ -1,3 +1,4 @@
+<div class="flex-grow-1">
 <%= simple_form_for @offer do |o| %>
 <div class="form-inputs container bg-light bg-gradient justify-content-center mt-5">
   <%= o.input :car_model, label: "Enter your car model:", label_html: { class: 'my_class' } %>
@@ -10,3 +11,4 @@
     <%= o.button :submit, class: "btn btn-lg btn-dark my-2" %>
   </div>
 <% end %>
+</div>
