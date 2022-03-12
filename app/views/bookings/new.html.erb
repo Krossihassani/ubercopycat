@@ -1,0 +1,13 @@
+<div class="flex-grow-1">
+<h1 class="text-center mt-5">Book a ride</h1>
+<%= simple_form_for @booking do |b| %>
+<div class="form-inputs container bg-light bg-gradient justify-content-center mt-5">
+  <%= b.input :departing_from, label: "From :", label_html: { class: 'my_class' } %>
+  <%= b.input :going_to, label: "To :", label_html: { class: 'my_class' } %>
+</div>
+<div class="d-flex flex-column align-items-center">
+  <div class="form-actions">
+    <%= b.button :submit, "Request a ride", class: "btn btn-lg btn-dark my-2" %>
+  </div>
+<% end %>
+</div>

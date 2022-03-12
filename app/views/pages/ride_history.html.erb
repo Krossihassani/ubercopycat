@@ -1,0 +1,7 @@
+    <% current_user.bookings.each do |b| %>
+      <div class="d-flex flex-column ml-2 flex-fill ">
+        <p style="text-align:center"><%= b.departing_from %></p>
+        <p style="text-align:center"><%= b.going_to %></p>
+        <p style="text-align:center"><%= b.status %></p>
+      </div>
+    <% end %>
