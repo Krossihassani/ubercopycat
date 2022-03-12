@@ -4,6 +4,7 @@
 <div class="form-inputs container bg-light bg-gradient justify-content-center mt-5">
   <%= b.input :departing_from, label: "From :", label_html: { class: 'my_class' } %>
   <%= b.input :going_to, label: "To :", label_html: { class: 'my_class' } %>
+  <%= b.association :offer, collection: Offer.all.map {|o| [o.car_model, o.id]}, label: "Choose your ride", label_html: { class: 'my_class' } %>
 </div>
 <div class="d-flex flex-column align-items-center">
   <div class="form-actions">

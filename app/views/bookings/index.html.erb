@@ -1,0 +1,26 @@
+<div class="flex-grow-1">
+<h1 class="text-center mt-5">Bookings</h1>
+<ul class="drivers-list mt-4">
+
+<% @bookings.each do |booking| %>
+<li class="drivers-list-item ">
+<div class="card-car">
+  <%= cl_image_tag booking.offer.car_photo.key %>
+  <div class="card-car-infos">
+    <div>
+      <h2><%= booking.offer.car_model %></h2>
+      <p>Driven by: <%= booking.offer.user.full_name %></p>
+    </div>
+    <h2 class="card-car-pricing"><%= booking.offer.price_per_km.floor %> USD</h2>
+    <%= cl_image_tag booking.offer.user.avatar.key, class: "card-car-user avatar-bordered" %>
+  </div>
+
+  <% if policy(booking).edit? %>
+  <%= link_to 'Edit', edit_booking_path(booking), class: "d-flex justify-content-center" %>
+  <% end %>
+
+</div>
+</li>
+<% end %>
+</ul>
+</div>

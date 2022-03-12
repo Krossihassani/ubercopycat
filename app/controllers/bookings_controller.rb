@@ -12,12 +12,14 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @offers = Offer.all
     authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    authorize @booking
     if @booking.save!
       redirect_to booking_path(@booking)
     else
@@ -48,7 +50,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:departing_from, :going_to, :estimated_pickup_time, :date, :pick_up_time, :status)
+    params.require(:booking).permit(:departing_from, :going_to, :estimated_pickup_time, :date, :pick_up_time, :status, :offer_id)
   end
 
 end

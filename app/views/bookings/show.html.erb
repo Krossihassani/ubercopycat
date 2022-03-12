@@ -1,0 +1,18 @@
+<div class="card-car  mx-5 mt-5 w-50 h-50">
+  <%= cl_image_tag @booking.offer.car_photo.key %>
+  <div class="card-car-infos">
+    <div>
+      <h2><%= @booking.offer.car_model %></h2>
+      <p>Driven by: <%= @booking.offer.user.full_name %></p>
+      <p>Destination: <%= @booking.going_to %></p>
+    </div>
+    <h2 class="card-car-pricing"><%= @booking.offer.price_per_km.floor %> USD</h2>
+    <%= cl_image_tag @booking.offer.user.avatar.key, class: "card-car-user avatar-bordered" %>
+  </div>
+  <div class="d-flex justify-content-between">
+    <% if policy(@booking).edit? %>
+        <%= link_to 'Edit', edit_booking_path(@booking) %>
+    <% end %>
+    <%= link_to "Return to Driver's list", bookings_path(@bookings) %>
+    </div>
+</div>

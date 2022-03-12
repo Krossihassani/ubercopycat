@@ -9,7 +9,7 @@
         <li> <%= link_to "Drivers", "/offers", class: "dropdown-item text-white sidebar-link" %> </li>
         <li> <%= link_to "Book a ride", "/bookings/new", class: "dropdown-item text-white sidebar-link" %> </li>  
         <li> <%= link_to "Ride History", "/ride_history/", class: "dropdown-item text-white sidebar-link" %> </li>  
-
+        <li> <%= link_to "Bookings", "/bookings", class: "dropdown-item text-white sidebar-link" %> </li> 
     </ul>
     <hr>
     <div class="dropdown d-flex align-items-center"> <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"> <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <strong class="pl-2"> <%= current_user.full_name %></strong> </a>
